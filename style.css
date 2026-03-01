@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #0f0f0f;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00e0ff;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.hero-content {
+  text-align: center;
+  transform: rotateY(10deg);
+  animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotateY(10deg); }
+  50% { transform: translateY(-20px) rotateY(-10deg); }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00e0ff;
+  color: #000;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* 3D Card */
+.card3d {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 224, 255, 0.3);
+  transition: transform 0.5s;
+}
+.card3d:hover {
+  transform: rotateY(15deg) rotateX(5deg) scale(1.05);
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+.skill {
+  text-align: left;
+}
+.bar {
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.bar div {
+  height: 10px;
+  background: #00e0ff;
+}
+
+/* Projects */
+.project-card {
+  background: #1a1a1a;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: rotateY(10deg) scale(1.05);
+}
+
+/* Contact */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.contact-form button {
+  background: #00e0ff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+}
